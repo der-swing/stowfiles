@@ -50,3 +50,5 @@ function! MySpellLang()
   if g:myLang >= len(g:myLangList) | let g:myLang = 0 | endif
 endfunction
 map <F7> :<C-U>call MySpellLang()<CR>
+
+autocmd Filetype go autocmd BufWritePre <buffer> :%!gofmt
